@@ -14,6 +14,37 @@ body {
   letter-spacing: 0.03em;
 }
 
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+}
+
+.list {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
 a {
   text-decoration: none;
   color: var(--secondary-text-color);
@@ -44,21 +75,46 @@ li {
   list-style-type: none;
 }
 
+nav {
+  margin-left: -120px;
+}
+
 nav a {
   color: var(--primary-text-color);
 }
 
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+  /* outline: 1px solid red; */
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 /* header */
-.page-header {
-  background: #ffffff;
+.cont-3 {
+  justify-content: space-between;
+  align-items: stretch;
 }
 
 /* logo */
 .logo {
+  margin-top: 24px;
+  margin-bottom: 25px;
   font-family: "Raleway", "Roboto", sans-serif;
   font-weight: 700;
   font-size: 26px;
-  line-height: 1.9;
+  line-height: 1.38;
   color: var(--accent-text-color);
 }
 
@@ -67,10 +123,26 @@ nav a {
 }
 
 .site-nav-list {
+  display: flex;
+  margin-top: 32px;
+  margin-bottom: 32px;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+}
+
+.site-nav-list > li {
+  margin-right: 50px;
+}
+
+.site-contacts {
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+.cont {
+  margin-left: 50px;
 }
 
 /* hero */
@@ -78,7 +150,16 @@ nav a {
   background-color: #2f303a;
 }
 
+.hero-title {
+  max-width: 700px;
+  margin-top: 200px;
+  margin-bottom: 30px;
+}
+
 .hero-button {
+  width: 200px;
+  height: 50px;
+  margin-bottom: 200px;
   background: var(--accent-text-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
@@ -92,10 +173,22 @@ nav a {
 }
 
 /* section 1 */
-.title {
+
+.feature-list {
+  margin-top: 94px;
+  justify-content: space-between;
+}
+
+.feature-content {
+  width: 270px;
+}
+
+.feature-title {
   font-weight: 700;
+  font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
+  margin-bottom: 10px;
 }
 
 .content {
@@ -104,22 +197,47 @@ nav a {
 }
 
 /* Чем мы занимаемся */
+
+.section-title {
+  margin-bottom: 50px;
+  margin-top: 94px;
+}
+
+.work-list {
+  justify-content: space-between;
+  margin-bottom: 94px;
+}
 .work-examples img {
   width: 370px;
-  height: 294px;
 }
 
 /* Наша команда */
+.our-team {
+  background-color: var(--primary-bg-color);
+}
+
+.our-team h2 {
+  padding-top: 94px;
+}
+
 .our-team img {
   width: 270px;
   height: 260px;
 }
 
+.member-list {
+  justify-content: space-between;
+}
 .member {
+  margin-bottom: 94px;
   background-color: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 
 .member-name {
+  margin-top: 30px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
@@ -127,6 +245,8 @@ nav a {
 }
 
 .specialization {
+  margin-top: 10px;
+  margin-bottom: 30px;
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
@@ -138,6 +258,10 @@ footer {
   background-color: #2f303a;
 }
 
+.main-logo {
+  padding-top: 60px;
+}
+
 footer .a-info {
   color: rgba(255, 255, 255, 0.6);
   font-style: normal;
@@ -147,6 +271,14 @@ footer .a-info {
   color: white;
 }
 
+address {
+  margin-top: 20px;
+  padding-bottom: 60px;
+}
+
+address li {
+  margin-bottom: 9px;
+}
 address a {
   text-decoration: none;
   line-height: 1.71;
@@ -159,16 +291,27 @@ address a:focus {
   color: var(--accent-text-color);
 }
 
+.header-border {
+  border: 1px solid #ececec;
+}
 /* кнопки фильтра */
+
+.portfolio-list {
+  margin-top: 94px;
+  margin-bottom: 50px;
+  justify-content: center;
+}
+
 .nav-button {
+  margin-right: 8px;
   background: #f5f4fa;
-  border-radius: 4px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
   text-align: center;
   color: var(--primary-text-color);
   cursor: pointer;
+  border-radius: 4px;
 }
 
 .nav-button:focus,
@@ -178,10 +321,17 @@ address a:focus {
 }
 
 /* примеры */
+
+.example-list {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 94px;
+}
 .example {
   background: #ffffff;
-  border: 1px solid #eeeeee;
+  border: 1px solid rgba(238, 238, 238, 1);
   box-sizing: border-box;
+  margin-bottom: 30px;
 }
 
 .title {
@@ -190,9 +340,11 @@ address a:focus {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+  padding-left: 24px;
 }
 
 .description {
   font-size: 16px;
   line-height: 1.87;
+  padding-left: 24px;
 }
