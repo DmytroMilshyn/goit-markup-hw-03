@@ -35,6 +35,8 @@ button {
 
 img {
   display: block;
+  width: 100%;
+  height: auto;
 }
 
 .list {
@@ -73,10 +75,6 @@ h2 {
 
 li {
   list-style-type: none;
-}
-
-nav {
-  margin-left: -120px;
 }
 
 nav a {
@@ -130,6 +128,7 @@ nav a {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  margin-left: 120px;
 }
 
 .site-nav-list > li {
@@ -198,6 +197,7 @@ nav a {
 }
 
 /* Чем мы занимаемся */
+
 .work {
   padding-top: 94px;
   padding-bottom: 94px;
@@ -211,19 +211,13 @@ nav a {
 .work-list {
   justify-content: space-between;
 }
-.work-examples img {
-  width: 370px;
-}
 
 /* Наша команда */
+
 .our-team {
   background-color: var(--primary-bg-color);
   padding-bottom: 94px;
   padding-top: 94px;
-}
-
-.our-team img {
-  width: 100%;
 }
 
 .member-list {
@@ -305,7 +299,7 @@ address a:focus {
 
 .portfolio {
   padding-top: 94px;
-  padding-bottom: 30px;
+  padding-bottom: 94px;
 }
 
 .portfolio-list {
@@ -315,6 +309,10 @@ address a:focus {
 
 .portfolio-list li {
   margin-right: 8px;
+}
+
+.portfolio-list li:last-child {
+  margin-right: 0;
 }
 
 .nav-button {
@@ -334,14 +332,13 @@ address a:focus {
 .nav-button:focus,
 .nav-button:hover {
   background-color: var(--accent-text-color);
+  color: #fff;
 }
 
 /* примеры */
-
 .example-list {
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-bottom: 94px;
 }
 .example {
   background: #ffffff;
@@ -356,6 +353,12 @@ address a:focus {
 
 .example div {
   padding: 20px 24px;
+}
+.example a:hover,
+.example a:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+  color: var(--secondary-text-color);
 }
 
 .example a {
